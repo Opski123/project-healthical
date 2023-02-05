@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Hamburger menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position:relative;
+}
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.hamburger-middle{
+    transform: translateY(7px);
+}
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+    display: none;
+}
+
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* section 1 */
+.sect1 {
+    background-image: url(../images/bg-img-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+.image-overlay {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+}
+
+/* .contentBx{
+    position: relative;
+}
+.label {
+    position: relative;
+}
+.content {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition-duration: 0.5s;
+} */
+.label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-58%);
+    font-size: 2em;
+}
+.accordion .contentBx.active .label::before {
+    content: '-';
+}
+
+.accordion .contentBx.active .content {
+    
+    display: block;
+}
+
+
+/* About page */
+.about-sect1 {
+    background-image: url(../images/about-bg-img.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 488px;
+}
+.about-image-overlay {
+    width: 100vw;
+    height: 488px;
+    background: rgba(36, 36, 36, 0.7);
+    align-items: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    .statement-box {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+

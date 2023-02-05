@@ -1,0 +1,171 @@
+<!DOCTYPE class="font-poppins"html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Sign in</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!---------Font Awesome link---------->
+    <script src="https://kit.fontawesome.com/70715de4e6.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="font-poppins">
+    <section class="flex flex-col lg:flex-row mt-4 md:mt-0 py-2">
+      <!-- image -->
+      <div class="hidden lg:flex flex-col lg:w-2/5 pr-16 pt-44 xlg:pt-20">
+        <a href="index.html" class="cursor-pointer  mb-16 mx-auto">
+          <img src="./images/logo-1.svg" alt="" class="h-32 mb-7 ">
+          <h2 class="text-blue text-3xl text-center mt-0.5">Healthical</h2>
+        </a>
+        <img src="./images/rafiki.jpg" alt="" class="mt-3 mb-32" />
+      </div>
+      <!-- just logo -->
+      <div class="lg:hidden">
+        <a href="index.html">
+          <img src="./images/logo-1.svg" alt="" class="absolute h-8 mt-11 pl-16 md:pl-28 ">
+        </a>
+      </div>
+      <!-- sign in form -->
+      <div class="mx-auto flex flex-col lg:w-3/5 px-11 lg:shadow lg:shadow-1">
+        <h3 class="text-3xl text-center text-blue pr-4 my-16">Sign in</h3>
+        <div class="justify-center rounded-full bg-lightGray px-2 py-1.5 mb-16 w-fit mx-auto">
+          <button class="bg-transparent text-white text-xl lsm:text-2xl py-3 rounded-full px-10 lsm:px-16 xxlg:px-20"><a href="patient-sign-in.html">Patient</a></button>
+        <button class="bg-blue text-white text-xl lsm:text-2xl py-3 rounded-full px-10 lsm:px-16 xxlg:px-20">Hospital</button>
+        </div>        
+        
+        <form action="" class="mt-2 space-y-8 pr-4 mx-auto">
+          <div class="focus:text-darkBrown">
+            <label for="email" class="emailBox"></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
+              required
+            />
+            <div class="emailText text-red-500 text-xs"></div>
+          </div>
+
+          <div class="focus:text-darkBrown relative">
+            <div class="flex items-center">
+              <span class="eye absolute cursor-pointe left-72 lsm:left-96 sm:pl-5 lsm:pl-10 xxlg:pl-60" onclick="myFunction()">
+                <i id="show1" class="fa-solid fa-eye text-brown hidden"></i>
+                <i id="hide1" class="fa-solid fa-eye-slash text-brown"></i>
+              </span>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
+                required
+              />
+            </div>
+            <div class="passText text-red-500 text-xs"></div>
+          </div>  
+          <div class="flex">
+            <div class="flex w-1/2">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                style="outline: 4px solid #f0f4f0; border-radius: 4px"
+                class="mr-4 border-4 border-gray rounded w-6 h-6 focus:outline-none focus:ring-0"
+              />
+              <p class="text-darkBrown">Remember me</p>
+            </div>
+            <a href="hospital-forgot-password.html" class="w-1/2 pl-4 sm:pl-12 xxlg:pl-40 text-darkBrown">Forgot password?</a>
+          </div>
+          <div class="">
+            <button
+              type="submit"
+              class="py-3 px-36 sm:px-16 mb-7 bg-blue text-white rounded-xl"
+              onclick="return check()"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+        <p class="mx-auto sm:mx-0 pr-4 mt-0.5 font-medium">
+          Don't have an account?
+          <a href="hospital-sign-up.html" class="text-blue">Sign up</a>
+        </p>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+          document.getElementById('show1').style.display ="inline-block"
+          document.getElementById('hide1').style.display ="none"
+        }
+        else{
+          x.type = "password";
+          document.getElementById('show1').style.display ="none"
+          document.getElementById('hide1').style.display ="inline-block"
+        }
+      }
+      function myFunction2() {
+        var x = document.getElementById("password2");
+        if (x.type === "password") {
+          x.type = "text";
+          document.getElementById('show2').style.display ="inline-block"
+          document.getElementById('hide2').style.display ="none"
+        }
+        else{
+          x.type = "password";
+          document.getElementById('show2').style.display ="none"
+          document.getElementById('hide2').style.display ="inline-block"
+        }
+      }
+
+      const email = document.getElementById("email");
+		const password = document.getElementById("password");
+
+		email.addEventListener('input',()=>{
+			const emailBox = document.querySelector('.emailBox');
+			const emailText = document.querySelector('.emailText');
+			const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+
+			if(email.value.match(emailPattern)){
+				emailBox.classList.add('valid');
+				emailBox.classList.remove('invalid');
+				emailText.innerHTML = ""; 
+			}else{
+				emailBox.classList.add('invalid');
+				emailBox.classList.remove('valid');
+				emailText.innerHTML = "Must be a valid email address."; 
+			}
+		});
+
+		password.addEventListener('input',()=>{
+			const passBox = document.querySelector('.passBox');
+			const passText = document.querySelector('.passText');
+			const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+
+			if(password.value.match(passPattern)){
+				passBox.classList.add('valid');
+				passBox.classList.remove('invalid');
+				passText.innerHTML = ""; 
+			}else{
+				passBox.classList.add('invalid');
+				passBox.classList.remove('valid');
+				passText.innerHTML = "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number."; 
+			}
+		});
+    </script>
+  </body>
+</html>
