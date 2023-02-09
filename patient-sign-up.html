@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Sign up</title>
+    <title>Hospital Sign up</title>
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,9 +19,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- js -->
     <script src="./js/script.js" defer></script>
     <script src="./build/js/intlTelInput.js"></script>
+
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="./build/css/demo.css" type="text/css" />
@@ -30,7 +30,6 @@
       href="./build/css/intlTelInput.css"
       type="text/css"
     />
-
   </head>
   <body class="font-poppins">
     <section class="flex flex-col lg:flex-row mt-4 md:mt-0 py-2">
@@ -40,8 +39,9 @@
           <img src="./images/logo-1.svg" alt="" class="h-32 mb-7" />
           <h2 class="text-blue text-3xl text-center mt-0.5">Healthical</h2>
         </a>
-        <img src="./images/rafiki.jpg" alt="" class="mt-3 mb-34" />
+        <img src="./images/rafiki.jpg" alt="" class="mt-3" />
       </div>
+
       <!-- just logo -->
       <div class="lg:hidden">
         <a href="index.html">
@@ -52,6 +52,7 @@
           />
         </a>
       </div>
+
       <!-- sign up form -->
       <div
         class="mx-auto flex flex-col items-center lg:w-3/5 px-11 lg:shadow lg:shadow-1"
@@ -60,42 +61,45 @@
           Sign up
         </h3>
         <div
-          class="flex justify-center rounded-full bg-lightGray px-2 py-1.5 mb-16 w-fit mx-auto"
+          class="justify-center rounded-full bg-lightGray px-2 py-1.5 mb-16 w-fit mx-auto"
         >
           <button
             class="bg-blue text-white text-xl lsm:text-2xl py-3 rounded-full px-10 lsm:px-16 xxlg:px-20"
           >
-            Patient
+            <a href="patient-sign-up.html">Patient</a>
           </button>
           <button
             class="bg-transparent text-white text-xl lsm:text-2xl py-3 rounded-full px-10 lsm:px-16 xxlg:px-20"
           >
-            <a href="hospital-sign-up.html">Hospital</a>
+          <a href="hospital-sign-up.html">Hospital</a>
           </button>
         </div>
-        <form id="form" method="post" action="" class="mt-2 space-y-8 pr-4">
+        <form
+          id="form"
+          method="post"
+          action=""
+          class="mt-2 space-y-8 pr-4 mx-auto"
+        >
           <div class="focus:text-darkBrown">
             <input
               type="text"
               name="firstname"
               id="firstname"
-              placeholder="First name"
+              placeholder="First Name"
               class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
             />
-            <div id="error-firstname" class="text-red-500 text-xs"></div>
+            <div id="error-firstname" class="text-red-500"></div>
           </div>
-
           <div class="focus:text-darkBrown">
             <input
               type="text"
               name="lastname"
               id="lastname"
-              placeholder="Last name"
+              placeholder="Last Name"
               class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
             />
-            <div id="error-lastname" class="text-red-500 text-xs"></div>
+            <div id="error-lastname" class="text-red-500"></div>
           </div>
-
           <div class="focus:text-darkBrown">
             <input
               type="text"
@@ -104,9 +108,8 @@
               placeholder="Mobile Number"
               class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
             />
-            <div id="error-telephone" class="text-red-500 text-xs"></div>
+            <div id="error-telephone" class="text-red-500"></div>
           </div>
-
           <div class="focus:text-darkBrown">
             <label for="email" class="emailBox"></label>
             <input
@@ -116,16 +119,23 @@
               placeholder="Email Address"
               class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
             />
-            <div id="error-email" class="text-red-500 text-xs"></div>
+            <div id="error-email" class="text-red-500"></div>
           </div>
-
           <div class="focus:text-darkBrown relative">
             <div class="flex items-center">
               <span
-                class="eye absolute cursor-pointer left-72 lsm:left-96 sm:pl-5 lsm:pl-10 xxlg:pl-60"
+                class="eye absolute cursor-pointe left-72 lsm:left-96 sm:pl-5 lsm:pl-10 xxlg:pl-60"
               >
-                <i onclick="handleToggle(event)" id="p-1" class="fa-solid fa-eye text-brown hidden"></i>
-                <i onclick="handleToggle(event)" id="p-2" class="fa-solid fa-eye-slash text-brown"></i>
+                <i
+                  onclick="handleToggle(event)"
+                  id="p-1"
+                  class="fa-solid fa-eye text-brown hidden"
+                ></i>
+                <i
+                  onclick="handleToggle(event)"
+                  id="p-2"
+                  class="fa-solid fa-eye-slash text-brown"
+                ></i>
               </span>
               <input
                 type="password"
@@ -135,17 +145,24 @@
                 class="border w-80 sm:w-96 lsm:w-500 xxlg:w-700 py-3 pl-5 border-lightBlue rounded placeholder:text-brown focus:outline-none"
               />
             </div>
-            <div id="error-password" class="text-red-500 text-xs"></div>
+            <div id="error-password" class="text-red-500"></div>
           </div>
-
           <div class="focus:text-darkBrown relative">
             <label for="password" class="passBox"></label>
             <div class="flex items-center">
               <span
                 class="eye absolute cursor-pointer left-72 lsm:left-96 sm:pl-5 lsm:pl-10 xxlg:pl-60"
               >
-                <i onclick="handleToggle(event)" id="cp-1" class="fa-solid fa-eye float-end text-brown hidden"></i>
-                <i onclick="handleToggle(event)" id="cp-2" class="fa-solid fa-eye-slash float-end text-brown"></i>
+                <i
+                  onclick="handleToggle(event)"
+                  id="cp-1"
+                  class="fa-solid fa-eye float-end text-brown hidden"
+                ></i>
+                <i
+                  onclick="handleToggle(event)"
+                  id="cp-2"
+                  class="fa-solid fa-eye-slash float-end text-brown"
+                ></i>
               </span>
               <input
                 type="password"
@@ -159,8 +176,8 @@
           </div>
           <div class="">
             <button
-              type="submit"
-              class="py-3 px-72 sm:px-16 mb-7 mt-4 bg-blue text-white rounded-xl"
+              type="Submit"
+              class="py-3 px-32 sm:px-16 mb-7 mt-4 bg-blue text-white rounded-xl"
             >
               Register
             </button>
@@ -174,83 +191,6 @@
         </p>
       </div>
     </section>
-
-    <!-- <script type="text/javascript">
-      function myFunction() {
-        var x = document.getElementById("password");
-        if (x.type === "password") {
-          x.type = "text";
-          document.getElementById("show1").style.display = "inline-block";
-          document.getElementById("hide1").style.display = "none";
-        } else {
-          x.type = "password";
-          document.getElementById("show1").style.display = "none";
-          document.getElementById("hide1").style.display = "inline-block";
-        }
-      }
-      function myFunction2() {
-        var x = document.getElementById("password2");
-        if (x.type === "password") {
-          x.type = "text";
-          document.getElementById("show2").style.display = "inline-block";
-          document.getElementById("hide2").style.display = "none";
-        } else {
-          x.type = "password";
-          document.getElementById("show2").style.display = "none";
-          document.getElementById("hide2").style.display = "inline-block";
-        }
-      }
-
-      const email = document.getElementById("email");
-      const password = document.getElementById("password");
-      const password2 = document.getElementById("password2");
-
-      email.addEventListener("input", () => {
-        const emailBox = document.querySelector(".emailBox");
-        const emailText = document.querySelector(".emailText");
-        const emailPattern =
-          /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
-
-        if (email.value.match(emailPattern)) {
-          emailBox.classList.add("valid");
-          emailBox.classList.remove("invalid");
-          emailText.innerHTML = "";
-        } else {
-          emailBox.classList.add("invalid");
-          emailBox.classList.remove("valid");
-          emailText.innerHTML = "Must be a valid email address.";
-        }
-      });
-
-      password.addEventListener("input", () => {
-        const passBox = document.querySelector(".passBox");
-        const passText = document.querySelector(".passText");
-        const passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-
-        if (password.value.match(passPattern)) {
-          passBox.classList.add("valid");
-          passBox.classList.remove("invalid");
-          passText.innerHTML = "";
-        } else {
-          passBox.classList.add("invalid");
-          passBox.classList.remove("valid");
-          passText.innerHTML =
-            "Your password must be at least 6 characters as well as contain at least one uppercase, one lowercase, and one number.";
-        }
-      });
-
-      function check() {
-        var password = document.getElementById("password").value;
-        var password2 = document.getElementById("password2").value;
-
-        if (password == password2) {
-          document.getElementById("wrong").innerHTML = "";
-          return true;
-        } else {
-          document.getElementById("wrong").innerHTML = "Passwords don't match";
-          return false;
-        }
-      }
-    </script> -->
+    <script src="./js/script-2.js"></script>
   </body>
 </html>
